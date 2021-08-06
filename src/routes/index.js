@@ -1,7 +1,9 @@
 const admin = require('firebase-admin')
+const path = require('path')
 
 //var serviceAccount = require(process.env.GOOGLE_APPLICATIONS_CREDENTIALS);
-var serviceAccount =  require("C:/Users/DemonDriver/Documents/PROYECTO PROGRAMACION/practica 6 - segundo intento/practica6-f0654-firebase-adminsdk-3byy2-83bd349fee.json");
+//var serviceAccount =  require("C:/Users/DemonDriver/Documents/PROYECTO PROGRAMACION/practica 6 - segundo intento/practica6-f0654-firebase-adminsdk-3byy2-83bd349fee.json");
+var serviceAccount =  require(path.resolve('./')+"/practica6-f0654-firebase-adminsdk-3byy2-83bd349fee.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://practica6-f0654-default-rtdb.firebaseio.com"
